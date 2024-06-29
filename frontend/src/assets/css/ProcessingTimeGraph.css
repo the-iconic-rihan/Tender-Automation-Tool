@@ -1,0 +1,37 @@
+.processing-card {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prc-card-header {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #39434f;
+  flex-basis: 10%;
+}
+
+.prc-graph-container {
+  width: 100%;
+  flex-basis: 90%;
+  flex-grow: 1;
+}
+
+.prcss-time-graph-custom-tooltip {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.prcss-time-graph-custom-tooltip > .label {
+  color: #39434f;
+  font-size: 0.813rem;
+  font-weight: 600;
+}

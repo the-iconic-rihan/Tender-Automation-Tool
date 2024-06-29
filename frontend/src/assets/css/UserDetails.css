@@ -1,0 +1,163 @@
+#user-modal > .modal-content {
+  width: 100%;
+  height: 100%;
+}
+
+.user-details-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.ad-us-dt-c1 {
+  width: 100%;
+  height: 225px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+}
+
+.usdt-select-container {
+  background-color: #fff;
+  flex-basis: 60%;
+  border-radius: 5px;
+  display: flex;
+  padding: 8px;
+}
+
+.usdt-sel-actions {
+  flex-basis: 75%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.usdt-sel-actions > h3 {
+  font-size: 1.5rem;
+  flex-basis: 10%;
+}
+
+.usdt-sel-act-con {
+  flex-basis: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.usdt-sel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.usdt-sel > label {
+  text-align: start;
+  display: block;
+}
+
+.usdt-sel > select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f4f5ff;
+  box-shadow: 0px 3.56px 8.899px 0px rgba(169, 180, 203, 0.25);
+  padding: 6px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.usdt-sel > button {
+  padding: 6px 24px;
+  font-size: 0.913rem;
+  font-weight: 400;
+}
+
+.usdt-sel-image {
+  flex-basis: 25%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.usdt-sel-image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.usdt-graph-container {
+  background-color: #fff;
+  flex-basis: 40%;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  height: 100%;
+}
+
+.usdt-graph-legend-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.usdt-graph-legend-header > small {
+  color: #4d4d4d;
+}
+
+.usdt-graph-legend-header > p {
+  color: #000;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.usdt-g-legend-data {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.usdt-g-legend-data > p {
+  font-size: 0.813rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #5a5a5a;
+}
+
+.usdt-legend-sign-failed::before {
+  background-color: #d90429;
+}
+
+.usdt-legend-sign-processing::before {
+  background: #2378b3;
+}
+
+.usdt-legend-sign-succeeded::before {
+  background: #7cbe76;
+}
+
+.usdt-legend-sign-nfu::before {
+  background: #f76f43;
+}
+
+.usdt-g-legend-data > p::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 10px;
+  border-radius: 4px;
+}
+
+.usdt-g-legend-data > p > b {
+  color: #333;
+}
+
+.ad-us-dt-table-container {
+  width: 100%;
+  height: fit-content;
+  min-height: 10px;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+}

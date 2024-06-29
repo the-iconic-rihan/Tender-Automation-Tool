@@ -1,0 +1,168 @@
+.login-container {
+  text-align: center;
+  width: 90%;
+  height: 90%;
+}
+
+.login-heading {
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.313em;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.username-label {
+  display: block;
+  text-align: start;
+  padding-bottom: 0.75rem;
+  font-weight: 500;
+  font-size: 1.125em;
+}
+
+.login-input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 20.5rem;
+  padding-bottom: 1rem;
+}
+
+.user-input-section {
+  border-radius: 10px;
+  border: 1px solid #969595;
+  display: flex;
+  align-items: center;
+  padding: 0 0.25rem;
+  width: 100%;
+  padding: 0.2rem;
+  background: #fff;
+}
+
+.user-input-section:focus-within {
+  border: 1px solid #186daa;
+  box-shadow: 0px 2px 4px 0px #00000040;
+}
+.invalid-username {
+  border: 1px solid #cc3333;
+}
+
+.user-input {
+  padding: 0.8rem 1rem;
+  border: none;
+  width: 100%;
+  margin-left: 0.5rem;
+  background: url(../images/username.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 5% 30%;
+  text-indent: 20px;
+  padding-left: 0%;
+}
+
+.password-label {
+  padding-bottom: 0.75rem;
+}
+
+.user-password {
+  background: url(../images/lock.svg);
+  background-size: 10% 25%;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  flex-basis: 90%;
+  margin-left: 0;
+  text-indent: 30px;
+}
+
+.password-icon {
+  flex-basis: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-icon > img {
+  width: 1.25rem;
+  cursor: pointer;
+}
+
+.forgot-password-wrapper {
+  width: 20.5rem;
+  text-align: end;
+}
+
+.password-forgot_password {
+  text-decoration: none;
+  color: #186daa;
+  font-size: 0.8em;
+}
+
+.invalid-password {
+  border: 1px solid #cc3333;
+}
+
+.invalid-password_message {
+  display: block;
+  text-align: left;
+  font-size: 0.913em;
+  color: #cc3333;
+  margin-bottom: 1rem;
+  width: 20.5rem;
+}
+
+.ael_division-container {
+  width: 20.5rem;
+  padding-bottom: 1rem;
+}
+
+.ae_division-select-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+
+  appearance: none;
+  background-image: url(../images/dropdown.svg);
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+}
+
+.ae_division-select-input:focus {
+  outline: none;
+  border: 1px solid #186daa;
+}
+
+.login-btn {
+  display: block;
+  text-align: center;
+  letter-spacing: 1px;
+  width: 15.5em;
+  background: linear-gradient(348.69deg, #186daa 42.3%, #ffffff 153.58%);
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em 0;
+  font-size: 1.313em;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.login-btn[disabled] {
+  background: linear-gradient(348.69deg, #81caff 42.3%, #ffffff 153.58%);
+  cursor: not-allowed;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

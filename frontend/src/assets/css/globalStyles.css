@@ -1,0 +1,159 @@
+/* @font-face {
+  font-family: "Roboto", sans-serif;
+  src: local("Roboto"), local("Roboto"),
+    url("../fonts/Roboto-Thin.ttf") format("truetype"),
+    url("../fonts/Roboto-Light.ttf") format("truetype"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype"),
+    url("../fonts/Roboto-Medium.ttf") format("truetype"),
+    url("../fonts/Roboto-Bold.ttf") format("truetype"),
+    url("../fonts/Roboto-Black.ttf") format("truetype");
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+:root {
+  --main-font: "Roboto", sans-serif;
+  --super-heading: 4.5rem;
+  --super-heading-font-weight: 700;
+  --super-heading-line-height: 5.25rem;
+  --super-sub-heading: 3rem;
+  --super-sub-heading-font-weight: 500;
+  --super-sub-heading-line-height: 3.5rem;
+  --heading: 1.5rem;
+  --heading-font-weight: 500;
+  --heading-line-height: 1.75rem;
+  --sub-heading: 1.25rem;
+  --sub-heading-font-weight: 500;
+  --sub-heading-line-height: 1.5rem;
+  --normal-text: 1rem;
+  --normal-text-font-weight: 400;
+  --normal-text-line-height: 1.25rem;
+  --sub-text: 0.875rem;
+  /* --sub-text: 0.75rem; */
+  --sub-text-font-weight: 500;
+  --sub-text-line-height: 1.125rem;
+  --smallest-text: 0.75rem;
+  --smallest-text-font-weight: 500;
+  --smallest-text-height: 1rem;
+
+  --primary-color: #186daa;
+  --disabled-primary-color: #186daa6c;
+
+  --light-color: #ffffff;
+  --dark-color: #000000;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #5dbbff #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #eaeaea;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5dbbff;
+  border-radius: 2px;
+  border: 2px none #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+body,
+#root,
+.App {
+  margin: 0;
+  /* font-family: cursive; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.page {
+  overflow: hidden;
+
+  width: 100vw;
+  /* width: 100dvw; */
+
+  height: 100vh;
+  /* height: 100dvh; */
+}
+
+.sub-page {
+  max-width: 2000px;
+  max-height: 1000px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btn {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:focus {
+  cursor: pointer;
+  outline: 1px solid var(--primary-color);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled-primary-color);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.delete_bin-btn {
+  cursor: pointer;
+  stroke: #186daa;
+}
+
+.delete_bin-btn:disabled {
+  cursor: not-allowed;
+  stroke: #969696;
+}
+
+.rc-slider-handle {
+  display: none;
+}
+
+.btn-icon {
+  border: none;
+  background-color: #ffffff;
+}

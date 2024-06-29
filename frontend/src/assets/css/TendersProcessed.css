@@ -1,0 +1,54 @@
+.tenders-processed-container {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tenders-processed-header {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #39434f;
+}
+
+.tnd-pr-chart-container {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.tnd-pr-pc-legend-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tnd-pr-lg-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tnd-lgd-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tnd-lgd-label > p {
+  color: #39434f;
+  font-size: 0.913rem;
+  font-weight: 500;
+}
+
+.fill-bg {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}

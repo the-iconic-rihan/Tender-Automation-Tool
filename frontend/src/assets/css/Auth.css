@@ -1,0 +1,94 @@
+.sign_in-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth_header-container {
+  flex-basis: 15%;
+  width: 100%;
+  flex-shrink: 2;
+}
+
+.ah_text-container {
+  height: 75%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.ah_thermax-logo-container {
+  display: flex;
+  align-items: center;
+  flex-basis: 90%;
+}
+
+.ah_dimensionless-logo-container {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+.ah_thermax-logo-container > p {
+  font-family: "Dancing Script", cursive;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #4f9802;
+  margin-left: 1rem;
+}
+
+.ah_img-container {
+  width: 100%;
+  height: 25%;
+  background: url(../images/auth_header_placeholder_img.jpg);
+  background-size: 100% 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.auth_content-container {
+  flex-basis: 85%;
+  flex-grow: 2;
+  width: 100%;
+
+  display: flex;
+}
+
+.auth_img-container {
+  flex-basis: 60%;
+  height: 100%;
+  background: url(../images/auth_placeholder_img.png);
+  background-size: 100% 100%;
+  color: white;
+}
+
+.auth_outlet-container {
+  flex-basis: 40%;
+  height: 100%;
+
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: transparent;
+}
+
+.ao_bgc-container-1 {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  background: linear-gradient(180deg, #bae4fa 0%, #749fd3 100%, #6f95d5 100%);
+  z-index: -1;
+}
+
+.ao_bgc-container-2 {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  background: linear-gradient(180deg, #dee9af 0%, #abd36c 100%);
+  z-index: -1;
+}

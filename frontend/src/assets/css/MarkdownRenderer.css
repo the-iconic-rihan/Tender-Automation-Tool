@@ -1,0 +1,16 @@
+.markdown-content-renderer {
+  width: 100%;
+  height: fit-content;
+  overflow: auto;
+}
+.markdown-content-renderer table {
+  border-collapse: collapse;
+}
+
+.markdown-content-renderer td,
+.markdown-content-renderer th {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  text-align: left;
+  text-wrap: wrap;
+}

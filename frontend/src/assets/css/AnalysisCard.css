@@ -1,0 +1,98 @@
+.analysis-card {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.analysis-card-header {
+  padding-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 20%;
+}
+
+.analysis-card-header > p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #39434f;
+}
+
+.analysis-card-header > button {
+  border-radius: 5px;
+  background: #daf4f0;
+  color: #186daa;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.an-cd-view-details-btn:disabled {
+  cursor: not-allowed;
+}
+
+.analysis-card-main-container {
+  flex-basis: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ana-dt {
+  height: 100%;
+  /* background-color: blanchedalmond; */
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px solid #dfe1e5;
+  border-radius: 2px;
+  padding: 0 8px;
+}
+
+.ana-dt:last-of-type {
+  border-right: none;
+}
+
+.ana-dt-header {
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-family: "Inter" sans-serif;
+  font-size: 1.25rem;
+}
+
+.ana-dt-main {
+  display: flex;
+  gap: 12px;
+}
+
+.ana-dt-main > img {
+  flex-basis: 20%;
+  max-width: 40px;
+}
+
+.ana-data {
+  flex-basis: 80%;
+  flex-grow: 1;
+}
+
+.ana-data-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  color: #39434f;
+}
+
+.ana-data-text > p:last-of-type {
+  font-size: 0.9rem;
+  color: #a3b2d0;
+}
+
+.ana-hide-max-text > p:last-of-type {
+  display: none;
+}

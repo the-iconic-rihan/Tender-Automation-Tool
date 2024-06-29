@@ -1,0 +1,59 @@
+version: "3.3"
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - .env.prod
+    depends_on:
+      - backend
+    volumes:
+      - ./mount:/mnt
+      - ./mount/ssl_certificate:/ssl_certificate
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    entrypoint: /entrypoint.sh
+    env_file:
+      - .env.prod
+    volumes:
+      - ./mount:/mnt
+
+  celery_worker:
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    command: celery -A backend worker  --loglevel=info -E --logfile=/TendorAutomationTool/mnt/celery.log
+    volumes:
+      - ./mount:/mnt
+    env_file:
+      - .env.prod
+    depends_on:
+      - redis
+    restart: always
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    container_name: tender-database
+    volumes:
+      - mongodbdata:/data/db
+    restart: always
+    command: mongod --quiet
+volumes:
+  mongodbdata:

@@ -1,0 +1,63 @@
+version: "3.9"  # Specify a valid Compose file version
+
+services:
+  thermaxbackend:
+    image: thermaxbackend
+    build: backend/
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/app
+      - ./mount:/mnt
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - celery_worker
+    ports:
+      - "8000:8000"
+    restart: always
+
+
+  thermaxfrontend:
+    build:
+      context: frontend/
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - NO_PROXY=localhost,127.0.0.1
+      - npm_config_timeout=120000
+      - npm_config_registry=https://registry.npmjs.org/
+    volumes:
+      - ./frontend/:/home/node
+      - /home/node/node_modules
+    ports:
+      - 3000:3000
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  celery_worker:
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    command: celery -A backend worker --loglevel=info -l INFO -E --concurrency=4 --logfile=/TendorAutomationTool/mnt/celery.log  
+    volumes:
+      - ./mount:/mnt
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    restart: always
+
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    container_name: tender-database
+    volumes:
+      - mongodbdata:/data/db
+    restart: always
+volumes:
+  mongodbdata:

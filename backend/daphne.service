@@ -1,0 +1,12 @@
+[Unit]
+Description=Daphne ASGI Service
+After=network.target
+
+[Service]
+Type=simple
+User=sammy  # Replace with your desired user
+WorkingDirectory=/backend/  # Change this to your project directory
+ExecStart=/usr/local/bin/daphne -u /tmp/daphne.sock backend.asgi:application
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+.upload_page-main-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .upload_page-main-container {
+    height: inherit;
+  }
+}

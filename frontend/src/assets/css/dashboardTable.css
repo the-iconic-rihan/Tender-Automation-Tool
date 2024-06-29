@@ -1,0 +1,228 @@
+.dashboard-table-container {
+  background-color: #fff;
+  flex-basis: 70%;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dt-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.dt-heading-container > h3 {
+  font-size: var(--sub-heading);
+  font-weight: var(--sub-heading-font-weight);
+}
+
+.dt-heading-container > input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.dt-table-container {
+  padding-top: 1rem;
+}
+
+.dahboard_table-wrapper {
+  width: 100%;
+}
+
+.dt-row {
+  background-color: #fbfbfb;
+  box-shadow: 0px -1px 0px 0px #e4e6e8 inset;
+  padding-top: 0.5rem;
+}
+
+.dt-row-cell {
+  padding: 1rem;
+  font-size: 0.75rem;
+}
+
+.sr_no {
+  width: 5%;
+  max-width: 50px;
+}
+
+.file_upload_status-file-uploading > span {
+  border: 1px solid #b5850b;
+  border-radius: 5px;
+  color: #b5850b;
+  font-weight: 600;
+
+  display: inline-block;
+  padding: 0.35rem;
+  width: fit-content;
+  text-align: center;
+}
+
+.file_upload_status-no-file-uploaded > span {
+  border: 1px solid #b83131;
+  border-radius: 5px;
+  color: #b83131;
+  font-weight: 600;
+
+  display: inline-block;
+  padding: 0.35rem;
+  width: fit-content;
+  text-align: center;
+}
+
+.file_upload_status-file-uploaded > span {
+  border: 1px solid #165e3d;
+  border-radius: 5px;
+  color: #165e3d;
+  font-weight: 600;
+
+  display: inline-block;
+  padding: 0.35rem;
+  width: fit-content;
+  text-align: center;
+}
+
+.tender_status-no-file-processed > span,
+.tender_status-error-in-category-generator > span,
+.tender_status-failed > span {
+  width: 100%;
+  background-color: #ffeaea;
+  color: #b83131;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.tender_status-no-file-processed > span::before,
+.tender_status-error-in-category-generator > span::before {
+  content: url(../images/no_files_uploaded.svg);
+}
+
+.tender_status-failed > span::before {
+  content: url(../images/error.svg);
+}
+
+.tender_status-uploading > span,
+.tender_status-pending > span {
+  width: 100%;
+  background-color: #fff6e9;
+  color: #b5850b;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.tender_status-uploading > span::before,
+.tender_status-pending > span::before {
+  content: url(../images/files_uploading.svg);
+}
+
+.tender_status-processing > span {
+  width: 100%;
+  background-color: #dcf0ff;
+  color: #186daa;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.tender_status-processing > span::before {
+  content: url(../images/file_processing.svg);
+}
+
+.tender_status-succeeded > span {
+  width: 100%;
+  background-color: #edffea;
+  color: #165e3d;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+.tender_status-succeeded > span::before {
+  content: url(../images/file_succeeded.svg);
+}
+
+.dt-table-navigation-container {
+  padding-top: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pagination-btn {
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.pagination-btn:hover {
+  background: #ffffff radial-gradient(circle, transparent 1%, #ffffff 1%)
+    center/15000%;
+}
+
+.pagination-btn:active {
+  background-color: #a6daff;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.pagination-btn:disabled {
+  cursor: not-allowed;
+}
+
+.pagination-btn > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.pagination-btn:focus {
+  outline: none;
+}
+
+@media (max-width: 1720px) {
+  .dt-table-container {
+    padding-top: 0.5rem;
+  }
+}
+
+.dashboard_table-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0.5rem 0;
+}
+
+.dashboard_table-btn-container > button {
+  padding: 0.5rem;
+  font-size: 0.813rem;
+  font-weight: 500;
+}
